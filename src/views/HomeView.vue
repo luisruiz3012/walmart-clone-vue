@@ -1,18 +1,27 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <section>
+  <h1>Title</h1>
+  <button class="bg-blue text-white px-4 py-2 m-3 rounded-sm" type="button" @click="addToCart(testItem)">Add to Cart</button>
+  </section>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import { mapMutations } from 'vuex'
 
 export default {
-  name: 'HomeView',
-  components: {
-    HelloWorld
+  name: 'NavbarComponent',
+  data () {
+    return {
+      testItem: {
+        id: 1,
+        name: 'Test Item',
+        price: 100.79,
+        quantity: 0
+      }
+    }
+  },
+  methods: {
+    ...mapMutations('cart', ['addToCart'])
   }
 }
 </script>
