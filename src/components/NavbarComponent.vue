@@ -6,7 +6,7 @@
       <NavItem text="Services" :icon="$icons.names.workspaces" />
     </nav>
     <div class="w-full bg-trasparent h-11 flex items-center pr-2 rounded-full search-container">
-      <input type="text" class="h-10 w-full pl-3 pr-12 rounded-full">
+      <input placeholder="Search Walmart" type="text" class="h-10 w-full pt-1 pl-3 pr-12 rounded-full">
       <button class="bg-yellow p-1 button flex items-center justify-center rounded-full w-9 h-9 ml-2">
         <a-icon :name="$icons.names.search" class="f-small" />
       </button>
@@ -35,6 +35,10 @@ export default {
 </script>
 
 <style scoped>
+header {
+  position: fixed;
+  z-index: 2;
+}
 .search-container {
   position: relative;
 }

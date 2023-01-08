@@ -16,9 +16,13 @@ export default {
   },
   mutations: {
     addToCart (state, item) {
-      item.quantity += 1
+      item = {
+        ...item,
+        quantity: 1
+      }
       state.cartItems.push(item)
       state.amount += item.price
+      console.log(state.cartItems)
     }
   }
 }
