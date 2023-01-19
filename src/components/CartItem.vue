@@ -1,5 +1,5 @@
 <template>
-  <a class="cursor-pointer cartContainer text-white no-underline px-6 mr-2 text-center1 py-6 rounded-full hover:bg-grey-darkest">
+  <router-link :to="'/cart'" class="cursor-pointer cartContainer text-white no-underline px-6 mr-2 text-center1 py-6 rounded-full hover:bg-grey-darkest">
     <div class="totalItems subtext text-black bg-yellow w-4 h-4 text-center pt-1 rounded-full">
       {{ totalItems }}
     </div>
@@ -9,7 +9,7 @@
         ${{ formatPrice(totalAmount) }}
       </p>
     </div>
-  </a>
+  </router-link>
 </template>
 
 <script>

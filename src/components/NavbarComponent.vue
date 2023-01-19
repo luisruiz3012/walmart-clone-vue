@@ -1,6 +1,8 @@
 <template>
   <header class='p-6 w-full border-b border-white bg-blue-dark flex items-center'>
-    <img class="md:flex lg:flex hidden" src='//i5.walmartimages.com/dfw/63fd9f59-b3e1/7a569e53-f29a-4c3d-bfaf-6f7a158bfadd/v1/walmartLogo.svg' alt='logo' />
+    <router-link to="/" class="w-2/5">
+      <img class="md:flex lg:flex hidden pl-4" src='//i5.walmartimages.com/dfw/63fd9f59-b3e1/7a569e53-f29a-4c3d-bfaf-6f7a158bfadd/v1/walmartLogo.svg' alt='logo' />
+    </router-link>
     <nav class="flex ml-4 items-center">
       <NavItem text="Departments" :icon="$icons.names.grid_view" />
       <NavItem text="Services" :icon="$icons.names.workspaces" />

@@ -1,9 +1,8 @@
 <template>
   <main class='main'>
-    <!-- <button class="px-4 py-2 m-3 text-white rounded-sm bg-blue" type="button" @click="addToCart(testItem)">Add to Cart</button> -->
     <section class='mainContainer'>
       <HeroGrid />
-      <section class='mt-4 grid'>
+      <section class='mt-4 grid w-full'>
         <CategoryCard title='Reset for the new year' />
         <CategoryCard title='Cant-miss savings' />
         <CategoryCard title='Top departments' />
@@ -61,12 +60,11 @@ export default {
   padding-top: 100px;
   background-color: #e6f1fc;
   min-height: 100vh;
-  width: 100vw;
 }
 
 .mainContainer {
   background: white;
-  width: 95vw;
+  width: 95%;
   margin-inline: auto;
   min-height: 80vh;
   padding: 20px;
@@ -76,12 +74,14 @@ export default {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 15px;
+  justify-items: center;
 }
 
 .gridItems {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 15px;
+  justify-items: center;
 }
 
 .banner {
@@ -99,6 +99,7 @@ export default {
     display: grid;
     grid-template-columns: 1fr;
     gap: 15px;
+    justify-items: center;
   }
 }
 
@@ -111,6 +112,7 @@ export default {
     display: grid;
     grid-template-columns: 1fr;
     gap: 15px;
+    justify-items: center;
   }
 }
 </style>
